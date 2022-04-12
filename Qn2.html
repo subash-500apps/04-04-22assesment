@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+    <body style="text-align: center; background-color: blueviolet; box-shadow: 0in;">
+ 
+    
+     
+             <p>    Type in the textbox and click on
+                    the button to count the words
+            </p>
+         
+         
+         
+    <textarea name="message" onkeyup="countChars(this);"></textarea>
+<p id="charNum">0 characters</p>
+    <script>
+        function countChars(obj){
+        document.getElementById("charNum").innerHTML = obj.value.length+' characters';
+        function countChars(obj){
+    var maxLength = 50;
+    var strLength = obj.value.length;
+    
+    if(strLength > maxLength){
+        document.getElementById("charNum").innerHTML = '<span style="color: red;">'+strLength+' out of '+maxLength+' characters</span>';
+    }else{
+        document.getElementById("charNum").innerHTML = strLength+' out of '+maxLength+' characters';
+    }
+}
+    }
+    </script>
+</body>
+</html>
